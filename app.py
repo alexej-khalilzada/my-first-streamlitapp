@@ -45,7 +45,7 @@ if st.checkbox("Show data frame containing raw data"):
 
 ##### Define columns
 # left_column, middle_column, right_column = st.columns([3, 1, 1])
-year_column = st.columns([3])
+year_column = st.columns([1])
 
 ###### Select a year for the visualization
 years_sorted = sorted(pd.unique(internet_share_df['Year']))
