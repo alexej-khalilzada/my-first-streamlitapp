@@ -54,7 +54,7 @@ year_selected = left_column.selectbox("Select Year", years_sorted)
 fig = px.choropleth(internet_share_df[internet_share_df['Year'] == year_selected], 
                     geojson=countries, locations='Code', 
                     color='usage_internet',
-                    color_continuous_scale="plotly3",
+                    color_continuous_scale="rainbow",
                     scope='world',
                     featureidkey="properties.ISO_A3",
                     labels={'usage_internet':'Individuals using the Internet in %'},
