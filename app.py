@@ -44,12 +44,11 @@ if st.checkbox("Show data frame containing raw data"):
     st.dataframe(data=internet_share_df)
 
 ##### Define columns
-# left_column, middle_column, right_column = st.columns([3, 1, 1])
-year_column = st.columns([1])
+left_column, middle_column, right_column = st.columns([3, 1, 1])
 
 ###### Select a year for the visualization
 years_sorted = sorted(pd.unique(internet_share_df['Year']))
-year_selected = year_column.selectbox("Select Year", years_sorted)
+year_selected = left_column.selectbox("Select Year", years_sorted)
 
 ##### Chloropleth map
 fig = px.choropleth(internet_share_df[internet_share_df['Year'] == year_selected], 
