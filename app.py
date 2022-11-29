@@ -27,11 +27,13 @@ st.title("Internet usage per country in percentage")
 st.header("Data Exploration")
 
 ###### Read Geo JSON data from file
-with open('/Users/alexejkhalilzada/Dokumente/Data_Science/SIT_Learning/repos/Alexej/alexej-khalilzada/03_Visualization/day3-4/my-first-streamlitapp/GeoJSON/countries.geojson') as f:
+#with open('/Users/alexejkhalilzada/Dokumente/Data_Science/SIT_Learning/repos/Alexej/alexej-khalilzada/03_Visualization/day3-4/my-first-streamlitapp/GeoJSON/countries.geojson') as f:
+with open('countries.geojson') as f:
     countries = geojson.load(f)
 
 ##### Read dataset from CSV file
-internet_share_df = pd.read_csv('/Users/alexejkhalilzada/Dokumente/Data_Science/SIT_Learning/repos/Alexej/alexej-khalilzada/03_Visualization/day3-4/my-first-streamlitapp/dataset/share-of-individuals-using-the-internet.csv')
+# internet_share_df = pd.read_csv('/Users/alexejkhalilzada/Dokumente/Data_Science/SIT_Learning/repos/Alexej/alexej-khalilzada/03_Visualization/day3-4/my-first-streamlitapp/dataset/share-of-individuals-using-the-internet.csv')
+internet_share_df = pd.read_csv('share-of-individuals-using-the-internet.csv')
 
 ##### Rename column
 internet_share_df.rename(columns={'Individuals using the Internet (% of population)':'usage_internet'}, inplace=True)
